@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Service } from '../../models/service.model';
 
@@ -12,5 +12,12 @@ import { Service } from '../../models/service.model';
 export class ServiceCardComponent {
   @Input({ required: true }) service!: Service;
   showDetails = false;
+
+  @HostListener('document:keydown.escape', ['$event'])
+  onKeydownHandler(event: KeyboardEvent) {
+    if (this.showDetails) {
+      this.showDetails = false;
+    }
+  }
 }
 

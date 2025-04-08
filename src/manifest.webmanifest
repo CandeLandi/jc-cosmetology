@@ -1,0 +1,17 @@
+{
+  "name": "JC Cosmetología",
+  "short_name": "JC Cosmetología",
+  "theme_color": "#7e22ce",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

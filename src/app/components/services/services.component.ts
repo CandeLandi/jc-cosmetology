@@ -14,12 +14,38 @@ export class ServicesComponent {
   services: Service[] = [
     {
       id: 1,
+      name: 'Asesoramiento Skincare',
+      description: 'Análisis personalizado de tu tipo de piel para recomendarte los productos y rutinas más adecuados para tu cuidado diario.',
+      icon: 'fa-solid fa-magnifying-glass',
+      details: {
+        duration: 'Consulta personalizada',
+        frequency: 'Según necesidad',
+        includes: 'diagnóstico personalizado y recomendaciones',
+        results: 'rutina personalizada de skincare'
+      },
+      benefits: [
+        {
+          title: 'Análisis profesional',
+          description: 'Evaluación detallada de tu tipo de piel y necesidades específicas'
+        },
+        {
+          title: 'Recomendaciones personalizadas',
+          description: 'Selección de productos adecuados para tu rutina diaria'
+        },
+        {
+          title: 'Educación',
+          description: 'Aprendé sobre los ingredientes y su función en el cuidado de la piel'
+        }
+      ]
+    },
+    {
+      id: 2,
       name: 'Limpieza facial profunda',
       description: 'Tratamiento completo que elimina impurezas, células muertas y puntos negros, dejando la piel completamente limpia y renovada.',
       icon: 'fa-solid fa-spa',
       details: {
-        duration: '60-90 minutos',
-        frequency: '1 vez al mes',
+        duration: '40-60 minutos',
+        frequency: '1 vez a la semana',
         includes: 'diagnóstico personalizado',
         results: 'visibles desde la primera sesión'
       },
@@ -39,13 +65,13 @@ export class ServicesComponent {
       ]
     },
     {
-      id: 2,
+      id: 3,
       name: 'Limpieza facial profunda + extracciones',
       description: 'Incluye todos los beneficios de la limpieza profunda más un proceso especializado de extracción de comedones y puntos negros.',
       icon: 'fa-solid fa-spray-can-sparkles',
       details: {
-        duration: '60-90 minutos',
-        frequency: '1 vez al mes',
+        duration: '40-60 minutos',
+        frequency: 'Cada 15 días',
         includes: 'diagnóstico personalizado',
         results: 'visibles desde la primera sesión'
       },
@@ -65,13 +91,13 @@ export class ServicesComponent {
       ]
     },
     {
-      id: 3,
+      id: 4,
       name: 'Limpieza facial profunda + aparatología',
       description: 'Combina la limpieza profunda tradicional con tecnología avanzada para potenciar los resultados.',
       icon: 'fa-solid fa-wand-magic-sparkles',
       details: {
-        duration: '60-90 minutos',
-        frequency: '1 vez al mes',
+        duration: '40-60 minutos',
+        frequency: 'Cada 15 días',
         includes: 'diagnóstico personalizado',
         results: 'visibles desde la primera sesión'
       },
@@ -91,13 +117,13 @@ export class ServicesComponent {
       ]
     },
     {
-      id: 4,
+      id: 5,
       name: 'Limpieza facial profunda + punta de diamante',
       description: 'Microdermoabrasión con punta de diamante que elimina células muertas y estimula la renovación celular.',
       icon: 'fa-gem fa-solid',
       details: {
-        duration: '60-90 minutos',
-        frequency: '1 vez al mes',
+        duration: '40-60 minutos',
+        frequency: 'Cada 15 días',
         includes: 'diagnóstico personalizado',
         results: 'visibles desde la primera sesión'
       },
@@ -117,12 +143,12 @@ export class ServicesComponent {
       ]
     },
     {
-      id: 5,
+      id: 6,
       name: 'Reflexología facial',
       description: 'Técnica de masaje que trabaja puntos específicos del rostro para equilibrar la energía y promover la relajación.',
       icon: 'fa-hand-holding-heart fa-solid',
       details: {
-        duration: '60-90 minutos',
+        duration: '90-120 minutos',
         frequency: '1 vez al mes',
         includes: 'diagnóstico personalizado',
         results: 'visibles desde la primera sesión'
@@ -143,13 +169,13 @@ export class ServicesComponent {
       ]
     },
     {
-      id: 6,
+      id: 7,
       name: 'Tratamiento Rosácea',
       description: 'Tratamiento especializado para pieles sensibles con tendencia al enrojecimiento y rosácea.',
       icon: 'fa-heart fa-solid',
       details: {
         duration: '60-90 minutos',
-        frequency: '1 vez al mes',
+        frequency: 'Según patología',
         includes: 'diagnóstico personalizado',
         results: 'visibles desde la primera sesión'
       },
@@ -169,13 +195,13 @@ export class ServicesComponent {
       ]
     },
     {
-      id: 7,
+      id: 8,
       name: 'Tratamiento Acné',
       description: 'Protocolo específico para pieles con acné que combina limpieza, control de bacterias y regulación de sebo.',
       icon: 'fa-face-smile fa-solid',
       details: {
         duration: '60-90 minutos',
-        frequency: '1 vez al mes',
+        frequency: 'Según patología',
         includes: 'diagnóstico personalizado',
         results: 'visibles desde la primera sesión'
       },
@@ -195,13 +221,13 @@ export class ServicesComponent {
       ]
     },
     {
-      id: 8,
+      id: 9,
       name: 'Tratamiento manchas de otoño-invierno',
       description: 'Tratamiento despigmentante específico para manchas que aparecen en temporadas frías.',
       icon: 'fa-snowflake fa-solid',
       details: {
         duration: '60-90 minutos',
-        frequency: '1 vez al mes',
+        frequency: 'Según patología',
         includes: 'diagnóstico personalizado',
         results: 'visibles desde la primera sesión'
       },
@@ -221,13 +247,13 @@ export class ServicesComponent {
       ]
     },
     {
-      id: 9,
+      id: 10,
       name: 'Tratamiento manchas de verano',
       description: 'Protocolo especializado para tratar y prevenir manchas causadas por la exposición solar.',
       icon: 'fa-solid fa-sun',
       details: {
         duration: '60-90 minutos',
-        frequency: '1 vez al mes',
+        frequency: 'Según patología',
         includes: 'diagnóstico personalizado',
         results: 'visibles desde la primera sesión'
       },
@@ -247,7 +273,7 @@ export class ServicesComponent {
       ]
     },
     {
-      id: 10,
+      id: 11,
       name: 'Drenaje linfático facial',
       description: 'Técnica de masaje suave que estimula el sistema linfático para eliminar toxinas y reducir la inflamación.',
       icon: 'fa-droplet fa-solid',
