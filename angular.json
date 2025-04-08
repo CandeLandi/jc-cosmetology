@@ -50,7 +50,8 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/jc-cosmetology/"
+              "baseHref": "/jc-cosmetology/",
+              "deployUrl": "/jc-cosmetology/"
             },
             "development": {
               "optimization": false,
