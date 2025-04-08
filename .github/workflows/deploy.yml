@@ -5,11 +5,21 @@ on:
     branches:
       - main
 
+# Permisos necesarios para GITHUB_TOKEN
+permissions:
+  contents: read      # Para clonar el repositorio
+  pages: write        # Para desplegar en GitHub Pages
+  id-token: write     # Para autenticarse con OIDC (requerido por actions/deploy-pages)
+
+# Permitir solo una ejecución concurrente, cancelar ejecuciones antiguas
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  # Job de Build: Construye el sitio y lo sube como artefacto
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -24,13 +34,36 @@ jobs:
 
       - name: Build application
         run: npm run build -- --configuration production
+        env:
+          # Asegurar que la URL base sea correcta para GitHub Pages si no hay dominio personalizado
+          # Si tienes un dominio personalizado, este baseHref es menos crítico, pero no daña
+          BASE_HREF: /jc-cosmetology/ # Reemplaza 'jc-cosmetology' si el nombre del repo es diferente
 
       - name: Create CNAME file
         run: echo "jc-cosmetology.com" > dist/jc-cosmetology/CNAME
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        # No se necesita configuración adicional si es un sitio estático simple
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: dist/jc-cosmetology
-          clean: true
+          # Carpeta que contiene los archivos construidos
+          path: './dist/jc-cosmetology'
+
+  # Job de Deploy: Despliega el artefacto subido
+  deploy:
+    needs: build # Depende de que el job 'build' termine exitosamente
+    permissions:
+      pages: write      # Permiso para desplegar
+      id-token: write   # Permiso para autenticación OIDC
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # URL del sitio desplegado
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        # No se necesita 'with' si el artefacto se subió con el nombre por defecto
