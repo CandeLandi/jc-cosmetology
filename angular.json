@@ -28,9 +28,9 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/_redirects",
-              "src/manifest.webmanifest",
-              "src/CNAME"
+              "_redirects",
+              "manifest.webmanifest",
+              "CNAME"
             ],
             "styles": [
               "src/styles.scss"
