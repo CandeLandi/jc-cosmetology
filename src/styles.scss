@@ -1,1 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-gray-800;
+  overflow-x: hidden;
+}
+
+/* Componentes */
+app-root {
+  display: block;
+}
+
+section {
+  @apply py-16 md:py-24;
+}
+
+/* Container */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 1280px;
+}
+
+/* Botones */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-purple-600 text-white hover:bg-purple-700;
+}
+
+.btn-secondary {
+  @apply bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold text-purple-900;
+}
+
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utilidades */
+.section-title {
+  @apply text-4xl md:text-5xl font-bold text-center text-purple-900 mb-12;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-purple-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-purple-400;
+}
+
+/* Section Utilities */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+@layer components {
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-center text-purple-900 mb-12;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600;
+  }
+}

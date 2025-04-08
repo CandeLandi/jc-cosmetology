@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+section {
+  background-color: white;
+}
+
+.image-container {
+  position: relative;
+
+  img {
+    @apply rounded-2xl shadow-lg;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}

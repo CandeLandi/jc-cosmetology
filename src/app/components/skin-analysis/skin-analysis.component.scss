@@ -1,0 +1,61 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  @apply max-w-7xl;
+}
+
+.feature-icon {
+  @apply w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xl;
+  transition: all 0.3s ease;
+
+  &:hover {
+    @apply bg-purple-200;
+    transform: scale(1.1);
+  }
+}
+
+.image-container {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background: theme('colors.purple.50');
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    left: -2rem;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: theme('colors.purple.100');
+    z-index: -1;
+  }
+
+  img {
+    @apply rounded-2xl shadow-xl;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+section {
+  @apply py-16 md:py-24;
+  width: 100%;
+  background-color: white;
+}

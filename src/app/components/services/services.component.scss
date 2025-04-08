@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+section {
+  @apply py-16 md:py-24;
+  width: 100%;
+  background-color: #f9fafb;
+}
+
+.container {
+  @apply max-w-7xl;
+}
+
+h2 {
+  background: linear-gradient(
+    to right,
+    theme('colors.purple.700'),
+    theme('colors.purple.500')
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.back-to-top {
+  @apply fixed bottom-8 right-8 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center shadow-lg;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &:hover {
+    @apply bg-purple-700;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 8px rgba(147, 51, 234, 0.3);
+  }
+
+  i {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover i {
+    transform: translateY(-2px);
+  }
+}
