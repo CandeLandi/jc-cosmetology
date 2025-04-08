@@ -26,13 +26,23 @@ import { FooterComponent } from './components/footer/footer.component';
 export class AppComponent {
   title = 'jc-cosmetology';
   showBackToTop = signal(false);
+  isModalOpen = signal(false);
 
   @HostListener('window:scroll')
   onWindowScroll() {
-    this.showBackToTop.set(window.scrollY > 500);
+    this.showBackToTop.set(window.scrollY > 500 && !this.isModalOpen());
   }
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  onModalStateChange(isOpen: boolean) {
+    this.isModalOpen.set(isOpen);
+    if (isOpen) {
+      this.showBackToTop.set(false);
+    } else {
+      this.onWindowScroll();
+    }
   }
 }

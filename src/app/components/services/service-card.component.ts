@@ -1,4 +1,4 @@
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, Input, HostListener, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Service } from '../../models/service.model';
 
@@ -11,7 +11,18 @@ import { Service } from '../../models/service.model';
 })
 export class ServiceCardComponent {
   @Input({ required: true }) service!: Service;
-  showDetails = false;
+  @Output() modalStateChange = new EventEmitter<boolean>();
+
+  private _showDetails = false;
+
+  get showDetails(): boolean {
+    return this._showDetails;
+  }
+
+  set showDetails(value: boolean) {
+    this._showDetails = value;
+    this.modalStateChange.emit(value);
+  }
 
   @HostListener('document:keydown.escape', ['$event'])
   onKeydownHandler(event: KeyboardEvent) {

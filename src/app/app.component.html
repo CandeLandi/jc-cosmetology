@@ -10,7 +10,7 @@
 <main class="min-h-screen bg-white">
   <app-hero id="home"></app-hero>
   <app-skin-analysis id="analysis"></app-skin-analysis>
-  <app-services id="services"></app-services>
+  <app-services id="services" (modalStateChange)="onModalStateChange($event)"></app-services>
   <app-professional-profile id="profile"></app-professional-profile>
   <app-contact id="contact"></app-contact>
   <app-footer></app-footer>
@@ -20,9 +20,9 @@
     (click)="scrollToTop()"
     [class.opacity-0]="!showBackToTop()"
     [class.pointer-events-none]="!showBackToTop()"
-    class="fixed bottom-4 right-4 w-10 h-10 bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 z-50"
+    class="fixed bottom-6 right-6 w-12 h-12 bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 z-50"
     aria-label="Volver arriba"
   >
-    <i class="fas fa-arrow-up text-sm"></i>
+    <i class="fas fa-arrow-up text-base"></i>
   </button>
 </main>

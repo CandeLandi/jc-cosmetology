@@ -1,10 +1,25 @@
 <section class="py-20 bg-white">
   <div class="container mx-auto px-4">
     <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-12 items-start">
+      <!-- Encabezado con nombre y presentación -->
+      <div class="mb-4 md:hidden">
+        <h2 class="text-3xl font-bold text-purple-900 mb-2">Julia Conforti</h2>
+        <p class="text-xl text-purple-700 mb-4">Especialista en Estética Profesional</p>
+
+        <!-- Imagen en móvil -->
+        <div class="mb-4">
+          <img
+            src="assets/images/perfil-image.jpg"
+            alt="Julia Conforti - Especialista en Estética Profesional"
+            class="w-full h-auto rounded-2xl shadow-lg"
+          >
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-start">
         <!-- Imagen y datos de contacto -->
-        <div class="space-y-6">
-          <div class="relative">
+        <div class="space-y-4">
+          <div class="relative hidden md:block">
             <img
               src="assets/images/perfil-image.jpg"
               alt="Julia Conforti - Especialista en Estética Profesional"
@@ -21,10 +36,11 @@
         </div>
 
         <!-- Información profesional -->
-        <div class="space-y-8">
-          <div>
+        <div class="space-y-6">
+          <!-- Presentación (visible solo en desktop) -->
+          <div class="hidden md:block">
             <h2 class="text-3xl font-bold text-purple-900 mb-2">Julia Conforti</h2>
-            <p class="text-xl text-purple-700 mb-6">Especialista en Estética Profesional</p>
+            <p class="text-xl text-purple-700 mb-4">Especialista en Estética Profesional</p>
             <p class="text-gray-600">
               Con una sólida formación en el prestigioso Instituto Idraet, me dedico a brindar
               tratamientos personalizados y resultados excepcionales, cuidando cada detalle

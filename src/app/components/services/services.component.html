@@ -6,11 +6,11 @@
     </p>
 
     <!-- Grid de servicios -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
       <app-service-card
         *ngFor="let service of services"
         [service]="service"
-        class="h-full"
+        (modalStateChange)="onModalStateChange($event)"
       ></app-service-card>
     </div>
   </div>

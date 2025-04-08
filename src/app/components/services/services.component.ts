@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServiceCardComponent } from './service-card.component';
 import { Service } from '../../models/service.model';
@@ -11,6 +11,12 @@ import { Service } from '../../models/service.model';
   styles: []
 })
 export class ServicesComponent {
+  @Output() modalStateChange = new EventEmitter<boolean>();
+
+  onModalStateChange(isOpen: boolean) {
+    this.modalStateChange.emit(isOpen);
+  }
+
   services: Service[] = [
     {
       id: 1,
