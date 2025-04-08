@@ -39,8 +39,8 @@ jobs:
           # Si tienes un dominio personalizado, este baseHref es menos crítico, pero no daña
           BASE_HREF: /jc-cosmetology/ # Reemplaza 'jc-cosmetology' si el nombre del repo es diferente
 
-      - name: Create CNAME file
-        run: echo "jc-cosmetology.com" > dist/jc-cosmetology/CNAME
+      - name: Create CNAME file in browser directory
+        run: echo "jc-cosmetology.com" > dist/jc-cosmetology/browser/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -49,8 +49,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Carpeta que contiene los archivos construidos
-          path: './dist/jc-cosmetology'
+          # Subir el contenido de la carpeta 'browser'
+          path: './dist/jc-cosmetology/browser'
 
   # Job de Deploy: Despliega el artefacto subido
   deploy:
