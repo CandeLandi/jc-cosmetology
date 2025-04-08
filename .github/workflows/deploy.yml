@@ -28,6 +28,7 @@ jobs:
           ng version
           ng build --configuration production
           cp CNAME dist/jc-cosmetology/
+          echo "jc-cosmetology.com" > dist/jc-cosmetology/CNAME
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
@@ -38,6 +39,5 @@ jobs:
           clean-exclude: |
             .git
             .gitignore
-            CNAME
           commit-message: "Deploy: ${{ github.event.head_commit.message }}"
           force: true
