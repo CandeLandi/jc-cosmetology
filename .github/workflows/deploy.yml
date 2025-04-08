@@ -26,17 +26,18 @@ jobs:
       - name: Build
         run: |
           ng version
-          ng build --configuration production --base-href=/jc-cosmetology/
-          ls -la dist/
+          ng build --configuration production
+          cp CNAME dist/jc-cosmetology/
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist
+          folder: dist/jc-cosmetology
           branch: gh-pages
           clean: true
           clean-exclude: |
             .git
             .gitignore
+            CNAME
           commit-message: "Deploy: ${{ github.event.head_commit.message }}"
           force: true
