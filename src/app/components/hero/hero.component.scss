@@ -15,7 +15,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/assets/images/home-image.jpg');
+  background-image: url('../../../assets/images/home-image.jpg');
 }
 
 .content {
@@ -28,19 +28,19 @@ h1 {
 }
 
 .btn {
-  @apply px-8 py-3 rounded-full font-semibold transition-all duration-300;
+  @apply w-64 py-3 rounded-full font-semibold transition-all duration-300;
 
   &.btn-primary {
-    @apply bg-purple-600 text-white hover:bg-purple-700 hover:shadow-lg transform hover:-translate-y-1;
+    @apply bg-purple-600/90 text-white border-2 border-purple-600;
+    &:hover {
+      @apply bg-purple-600;
+    }
   }
 
   &.btn-secondary {
-    @apply bg-white text-purple-600 hover:bg-purple-50;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+    @apply bg-white/90 text-purple-600 border-2 border-white;
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      @apply bg-white;
     }
   }
 }
