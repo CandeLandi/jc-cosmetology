@@ -1,21 +1,35 @@
-<section class="relative h-screen flex items-center justify-center">
-  <div class="absolute inset-0 bg-black/30"></div>
+<section class="relative min-h-screen flex items-center justify-center">
+  <div class="absolute inset-0 z-0">
+    <img
+      src="assets/images/home-image.jpg"
+      alt="Spa treatment background"
+      class="w-full h-full object-cover blur-[1px]"
+    >
+    <div class="absolute inset-0 bg-black/25"></div>
+  </div>
 
-  <div class="content text-center px-4">
-    <p class="text-xl text-white mb-4 font-poppins">
+  <div class="container relative z-10 mx-auto px-4 text-center">
+    <p class="text-xl text-white mb-4 font-poppins font-semibold">
       JC Cosmetología
     </p>
-    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 font-poppins">
-      Tu piel en su <span class="text-purple-400">mejor versión</span>
+    <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)] font-poppins">
+      Tu piel en su <span class="text-purple-400 drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">mejor versión</span>
     </h1>
-    <p class="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
-      Disfrutá de experiencias únicas en un ambiente tranquilo, pensado para que te relajes al máximo y te vayas renovada.
+    <p class="text-lg md:text-xl text-white mb-12 max-w-2xl mx-auto font-poppins">
+      Disfrutá de experiencias únicas en un ambiente tranquilo,
+      pensado para que te relajes al máximo y te vayas renovada.
     </p>
-    <div class="space-y-4 md:space-y-0 md:space-x-4">
-      <a href="#services" class="btn btn-primary">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="#services"
+        class="w-64 py-3 bg-purple-600 text-white font-medium rounded-full hover:bg-purple-700 transition-all duration-300"
+      >
         Explorar servicios
       </a>
-      <a href="#contact" class="btn btn-secondary">
+      <a
+        href="#contact"
+        class="w-64 py-3 bg-white text-purple-600 font-medium rounded-full hover:bg-purple-50 transition-all duration-300"
+      >
         Reservar cita
       </a>
     </div>

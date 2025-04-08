@@ -7,7 +7,7 @@ import { Service } from '../../models/service.model';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './service-card.component.html',
-  styleUrls: ['./service-card.component.scss']
+  styles: []
 })
 export class ServiceCardComponent {
   @Input({ required: true }) service!: Service;

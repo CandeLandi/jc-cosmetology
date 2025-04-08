@@ -8,7 +8,7 @@ import { Service } from '../../models/service.model';
   standalone: true,
   imports: [CommonModule, ServiceCardComponent],
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.scss']
+  styles: []
 })
 export class ServicesComponent {
   services: Service[] = [
