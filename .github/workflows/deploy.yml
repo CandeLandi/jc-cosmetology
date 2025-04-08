@@ -33,3 +33,5 @@ jobs:
           clean-exclude: |
             .git
             .gitignore
+          commit-message: "Deploy: ${{ github.event.head_commit.message }}"
+          force: true
