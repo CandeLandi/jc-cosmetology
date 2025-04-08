@@ -22,12 +22,12 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build -- --configuration production --base-href=/jc-cosmetology/
+        run: npm run build -- --configuration production
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/jc-cosmetology
+          folder: dist
           branch: gh-pages
           clean: true
           clean-exclude: |
