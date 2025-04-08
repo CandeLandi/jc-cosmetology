@@ -28,9 +28,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "_redirects",
-              "manifest.webmanifest",
-              "CNAME"
+              "src/_redirects",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.scss"
