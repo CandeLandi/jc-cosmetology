@@ -5,7 +5,7 @@
 }
 
 .back-to-top {
-  @apply fixed bottom-8 right-8 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center shadow-lg;
+  @apply fixed bottom-16 right-8 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center shadow-lg;
   transition: all 0.3s ease;
   opacity: 0;
   pointer-events: none;
